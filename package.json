@@ -1,5 +1,5 @@
 {
-  "name": "github-actions-trunk-based-developemnt",
+  "name": "github-actions-trunk-based-development",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

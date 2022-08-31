@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/github-actions-trunk-based-developemnt",
+    "public": "dist/github-actions-trunk-based-development",
     "ignore": [
       "firebase.json",
       "**/.*",

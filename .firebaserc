@@ -1,8 +1,9 @@
 {
   "projects": {
-    "default": "kulen-dayz-production",
+    "default": "kulen-dayz-development",
     "staging": "kulen-dayz-staging",
-    "production": "kulen-dayz-production"
+    "production": "kulen-dayz-production",
+    "development": "kulen-dayz-development"
   },
   "targets": {},
   "etags": {}
