@@ -17,10 +17,18 @@ jobs:
     name: Build and deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Install dependencies and build application
-        run: yarn && yarn build
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build application
+        run: yarn build
+
       - name: Deploy application to Firebase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
