@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "github-actions-trunk-based-developemnt": {
+    "github-actions-trunk-based-development": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/github-actions-trunk-based-developemnt",
+            "outputPath": "dist/github-actions-trunk-based-development",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "github-actions-trunk-based-developemnt:build:production"
+              "browserTarget": "github-actions-trunk-based-development:build:production"
             },
             "development": {
-              "browserTarget": "github-actions-trunk-based-developemnt:build:development"
+              "browserTarget": "github-actions-trunk-based-development:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "github-actions-trunk-based-developemnt:build"
+            "browserTarget": "github-actions-trunk-based-development:build"
           }
         },
         "test": {

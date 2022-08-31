@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'github-actions-trunk-based-developemnt'`, () => {
+  it(`should have as title 'github-actions-trunk-based-development'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('github-actions-trunk-based-developemnt');
+    expect(app.title).toEqual('github-actions-trunk-based-development');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('github-actions-trunk-based-developemnt app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('github-actions-trunk-based-development app is running!');
   });
 });
