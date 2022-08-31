@@ -12,4 +12,4 @@ jobs:
       projectId: kulen-dayz-staging
     secrets:
       repoToken: '${{ secrets.GITHUB_TOKEN }}'
-      firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KULEN_DAYZ_DEVELOPEMNT }}'
+      firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KULEN_DAYZ_STAGING }}'
