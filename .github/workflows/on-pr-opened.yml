@@ -53,7 +53,7 @@ jobs:
       - name: LS
         run: ls -all
       - name: LS
-        run: cd ./dist/ && ls
+        run: cd ./dist/ && ls && cd github-actions-trunk-based-development && ls
       # - uses: FirebaseExtended/action-hosting-deploy@v0
       #   with:
       #     repoToken: '${{ secrets.GITHUB_TOKEN }}'
