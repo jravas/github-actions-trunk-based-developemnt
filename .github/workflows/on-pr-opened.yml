@@ -48,7 +48,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-artifact
-          path: ./dist/
+          path: ./dist/*
 
       - name: LS
         run: ls -all
