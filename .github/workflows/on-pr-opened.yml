@@ -48,6 +48,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KULEN_DAYZ_DEVELOPEMNT }}'
-          projectId: kulen-dayz-developemnt
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KULEN_DAYZ_DEVELOPMENT }}'
+          projectId: kulen-dayz-development
     
