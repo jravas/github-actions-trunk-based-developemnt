@@ -48,9 +48,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-artifact
+          path: ./dist/
 
       - name: LS
         run: ls -all
+      - name: LS
+        run: cd ./dist/ && ls
       # - uses: FirebaseExtended/action-hosting-deploy@v0
       #   with:
       #     repoToken: '${{ secrets.GITHUB_TOKEN }}'
