@@ -1,0 +1,44 @@
+name: On PR
+on: 
+  pull_request:
+    branches: 
+      - "main"
+    types: [opened, reopened, synchronize]
+jobs:
+  test-and-build:
+    name: Test and Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run lint
+        run: yarn lint
+
+      - name: Run tests
+        run: yarn test --browsers ChromeHeadless --watch=false --code-coverage
+
+      - name: Build the application
+        run: yarn build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: ./dist/*
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_KULEN_DAYZ_DEVELOPMENT }}'
+          projectId: kulen-dayz-development
+    
